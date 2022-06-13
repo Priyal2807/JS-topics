@@ -120,3 +120,14 @@ reg = /colou?r/
 print(myStr,reg)
 print(myStr2,reg)
 
+/*capture groups */
+myStr = "hello world world"
+reg = /(\w+) \1/
+print(myStr, reg);
+
+/*capture groups to search and replace */
+myStr = "hello world world"
+reg = /(\w+) \1/;
+let result = myStr.replace(reg,"earth");
+print(myStr, reg);
+console.log(result)
