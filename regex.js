@@ -131,3 +131,10 @@ reg = /(\w+) \1/;
 let result = myStr.replace(reg,"earth");
 print(myStr, reg);
 console.log(result)
+
+/*how to use a variable in regex*/
+let str = "about";
+reg = new RegExp(str+"$")
+console.log(reg)
+myStr = "what is this about"
+print(myStr,reg)
