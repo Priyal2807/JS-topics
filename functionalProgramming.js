@@ -62,3 +62,23 @@ Array.prototype.myReduce = function(callback, initial)
 }
 const sumAge = users.myReduce((sum, user)=>sum+user.age,0);
 console.log(sumAge)
+
+/*slice function*/
+const arr=[1,2,4,5]
+console.log(arr.slice(1,3))
+console.log(arr)/*does not change the original array*/
+
+/*concat function*/
+const num = [1,2]
+console.log(num.push([4,5])) //[1,2,[4,5]]
+console.log(num)/*push modifies the existing array*/
+console.log(num.concat([12,13]))//[1,2,[4,5],12,13]
+console.log(num)/* does not modify this*/
+console.log(num.concat([4])) /*same as console.log(num.concat(4))*/
+console.log(num.push([30]))/*not the same output as console.log(num.push(30))*/
+console.log(num)
+
+/*sort function*/
+console.log(arr.sort((a,b) => {return a===b?0:a<b?1:-1}))  /*descending order*/
+
+
