@@ -31,3 +31,17 @@ Array.prototype.myMap = function(callback){
 const ans = users.myMap(usr=>usr.age*2);
 console.log(ans)
 
+/*Filter function*//*inbuilt one in Array.prototype*/
+console.log(users.filter(user=>user.age>40))//this will return the whole object, can use map to get the required property
+console.log(users.filter(user=>user.age>40).map(user=>user.name))
+
+/*Implement own Filter function*/
+Array.prototype.myFilter = function(callback){
+    const newArray = []
+    this.forEach(a => {if(callback(a))
+        newArray.push(a)}
+        )
+    return newArray;
+}
+const answer = users.myFilter(user=>user.age>40)
+console.log(answer)
