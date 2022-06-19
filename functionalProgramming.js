@@ -45,3 +45,20 @@ Array.prototype.myFilter = function(callback){
 }
 const answer = users.myFilter(user=>user.age>40)
 console.log(answer)
+
+/*reduce function to find the user with the maximum age*/
+const maxAge = users.reduce((max, user)=>Math.max(max, user.age),Number.NEGATIVE_INFINITY);
+console.log(maxAge)
+
+/*create own reduce function*/
+Array.prototype.myReduce = function(callback, initial)
+{
+    let ans = initial;
+    for(let i = 0;i<this.length;i++)
+    {
+        ans = callback(ans,this[i]);
+    }
+    return ans
+}
+const sumAge = users.myReduce((sum, user)=>sum+user.age,0);
+console.log(sumAge)
