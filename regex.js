@@ -138,3 +138,9 @@ reg = new RegExp(str+"$")
 console.log(reg)
 myStr = "what is this about"
 print(myStr,reg)
+
+/*how to escpa characters in regex*/
+let s1 = "\\s*\\w+\\s*" /*escape in the variable string only*/ /*matching the word followed or starting with any number of spaces*/
+reg = new RegExp(s1,"g")
+console.log(reg)
+print(myStr,reg)
