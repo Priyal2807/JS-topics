@@ -81,4 +81,24 @@ console.log(num)
 /*sort function*/
 console.log(arr.sort((a,b) => {return a===b?0:a<b?1:-1}))  /*descending order*/
 
+let demo = "this IS a DEMO string"
+let ans1="";
+
+/*tolowercase*/
+console.log(ans1=demo.toLowerCase()) //this returns a new string so in principal with functional programming
+console.log(ans1)
+
+/*touppercase*/
+console.log(demo.toUpperCase()) //same as above
+
+/*flat*/
+let anotherarr = [[1,2],[3,4]]
+console.log(anotherarr.flat()) //this returns a new Array so in principle with functional programming
+
+//some string and float and number functions coming up
+//toFixed
+//parseFloat
+//parseInt
+//charCodeAt
+//fromCharCode
 
