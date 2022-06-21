@@ -1,5 +1,8 @@
 const print = (str, reg) => console.log(str.match(reg));
 
+/*regex is used to match patterns in given string*/
+/* if we wish to match the exact pattern in the string, we should use the exact string as the regex input*/
+
 /* using the test function to find the regular expression */
 let myStr = "Hello World";
 let reg = /Hello/;
@@ -144,3 +147,12 @@ let s1 = "\\s*\\w+\\s*" /*escape in the variable string only*/ /*matching the wo
 reg = new RegExp(s1,"g")
 console.log(reg)
 print(myStr,reg)
+
+/*using | in regex */
+/*putting space in between the letters in regex counts as a space to match in the given string*/
+/*returns true if the given string matches any of the regex separated by |*/
+reg = /^Hello\s*-*\d+|^Hello\d*/  /*Hello followed by spaces and one letter atleast or Hello followed by no spaces but 0 or more letters*/
+myStr = "Hello1900000"
+console.log(reg.test(myStr))
+print(myStr,reg)
+
